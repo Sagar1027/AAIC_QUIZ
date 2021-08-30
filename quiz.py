@@ -1,7 +1,15 @@
 import json
 f = open('quiz.json')
 jfile = json.load(f)
-print("Select sport or maths:")
+
+sub = jfile["quiz"]
+list = []
+for key in sub.keys():
+	list.append(key)
+
+print("Select any subject :")
+for i in range (len(list)):
+	print(i+1,".",list[i])
 que=input()
 
 print()
